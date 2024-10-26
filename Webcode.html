@@ -1,0 +1,45 @@
+<html lang="en-CAN">
+
+
+
+	<head>
+		<title>WebO-bob</title>	
+	</head>
+
+	<body style="background-color:powderblue;">
+
+		<h1 style="color:red;">Hi, <mark>Welcome</mark> to WebO-bob</h1>
+
+		<p style="font-family:courier;">This is WebO-bob.</p>
+		<p style="color:green;">Green text</p>
+
+<button onclick="getLocation()">Your localisation</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+
+	</body>
+
+<a href="https://www.w3schools.com/html/html_basic.asp"> This can help you</a>
+
+
+
+</html>
